@@ -29,13 +29,70 @@
   ================================================== -->
   <script src="{{ "/js/vendor/modernizr.custom.94053.js" | prepend: site.baseurl }}"></script>
   <script src="script.js"></script>
+  <style>
+   * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  }
+
+  body {
+  background-color: #fff;
+  font-family: 'Crimson Text', serif;
+  }
+
+  #iframe {
+  display: block;
+  margin-left: 20px;
+  margin-bottom: 25px;
+  padding-top: -25px;
+  width: 95%;
+  height: 55%;
+  top: 400px;
+  transform: translate(-50%, -50%);
+  background-color: #2377ba;
+  border: none;
+  border-radius: 20px;
+  }
+
+  img {
+  color: #fff;
+  }
+
+  h1 {
+  color: #000;
+  display: inline-block;
+  font-family: 'Crimson Text', serif;
+  font-size: 40px;
+  margin-left: 5px;
+  }
+
+  .logo {
+  float: right;
+  display: inline-block;
+  }
+
+  .fa {
+  color: #2377ba;
+  display: inline-block;
+  margin-left: 5px;
+  }
+
+  .fa-twitter-square {
+  margin-left: 20px;
+  }
+  
+  /*.heading {
+  text-align: center;
+  }*/
+  </style>
   </head>
-	<body>
-    <div class="heading">
-    <i class="fa fa-twitter-square fa-2x"></i>
-    <i class="fa fa-instagram fa-2x"></i><h1>#DurhamBorn</h1>
-    <img src="img/modh-red.png" class="logo"/>
-    </div>
-    <iframe id='iframe' src='//flickrit.com/slideshowholder.php?height=75&size=big&speed=3&userId=137045659@N05&caption=on&counter=true&credit=1&trans=1&thumbnails=0&transition=0&layoutType=responsive&sort=0'></iframe>
-  </body>
+   <body>
+	<div class="heading">
+	<i class="fa fa-twitter-square fa-2x"></i>
+    	<i class="fa fa-instagram fa-2x"></i><h1>#DurhamBorn</h1>
+    	<img src="img/modh-red.png" class="logo"/>
+	</div>
+    	<iframe id='iframe' src='//flickrit.com/slideshowholder.php?height=75&size=big&speed=3&userId=137045659@N05&caption=on&counter=true&credit=1&trans=1&thumbnails=0&transition=0&layoutType=responsive&sort=0'></iframe>
+   </body>
 </html>
