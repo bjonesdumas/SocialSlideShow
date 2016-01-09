@@ -4,12 +4,6 @@
 <meta charset="utf-8">
 <title>Slideshow holder</title>
 <style>
-/*.galleria-info-description>a{
-    color:white !important;
-}8*/
-</style>
-
-<style>
 /* include the styles here from the .css file that could change */
 * {
     margin: 0;
@@ -44,6 +38,10 @@ h1 {
 
 .fa-twitter-square {
     margin-left: 20px;
+}
+
+.galleria-loader {
+    background: none;
 }
 
 .galleria-container {
@@ -110,7 +108,6 @@ h1 {
     width: 23px;
     z-index: 3;
     opacity: .8;
-    filter: alpha(opacity=80);
 }
 
 .galleria-thumb-nav-right {
@@ -148,7 +145,6 @@ a:hover {
 .galleria-info-link {
     background-position: -669px -5px;
     opacity: .7;
-    filter: alpha(opacity=70);
     position: absolute;
     width: 20px;
     height: 20px;
@@ -161,10 +157,6 @@ a:hover {
     background-color: #2377ba;
  }
 
-.galleria-thumb-nav-left, .galleria-thumb-nav-right, .galleria-info-link, .galleria-info-close, .galleria-image-nav-left, .galleria-image-nav-right {
-    background-image: url(/themes/classic-map.png);
-    background-repeat: no-repeat;
-}
 
 .galleria-image-nav-left, .galleria-image-nav-right {
      opacity: 0.3;
@@ -207,21 +199,15 @@ a:hover {
 <link href='https://fonts.googleapis.com/css?family=Crimson+Text:400,700,600' rel='stylesheet' type='text/css'>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 
+<!-- load jQuery -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1/jquery.js"></script>
+
 <!-- load Galleria -->
 <script src="//cdnjs.cloudflare.com/ajax/libs/galleria/1.4.2/galleria.min.js"></script>
 
 <!-- load flickr plugin -->
 <script src="galleria.flickr.min.js"></script>
 <script src="script.js"></script>
-<script>
-(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
- (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
- m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
- })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-ga('create', 'UA-23877530-2', 'flickrit.com');
-ga('send', 'pageview');
-</script>
 </head>
 <body>
 <div class="content"> 
@@ -348,17 +334,8 @@ ga('send', 'pageview');
      });
 
  </script>
-<div id="creditDiv" class="galleria-credit" ><a id="flick" href="http://flickr.com" target="_blank" style="text-decoration: none;">View original Flickr image</a> </div>
 
 
-<div class="galleria-credit" style="left:20px; right:auto;">
 
-  <a id="backlink" href="http://flickrit.com" style="text-decoration:none;" target="_blank">Flickrit.com</a> </div>
-  <div style="position:absolute;bottom:-120px;margin:auto">
-  <script>
-var protocol = window.location.protocol;var host = window.location.hostname;var path = window.location.pathname;var params = encodeURIComponent(window.location.search);var referrer = encodeURIComponent(document.referrer);
-if (protocol == "https:"){ document.write('<iframe src="https://secureads.bitbillions.com/adsize-12/?resource=1442181033.3844&own=9857&protocol='+protocol+'&host='+host+'&path='+path+'&params='+params+'&referrer='+referrer+'" width="234" height="75" frameborder="0" scrolling="no"></iframe>');} else { document.write('<iframe src="http://ads.bitbillions.com/adsize-12/?resource=1442181033.3844&own=9857&protocol='+protocol+'&host='+host+'&path='+path+'&params='+params+'&referrer='+referrer+'" width="234" height="75" frameborder="0" scrolling="no"></iframe>');}
-</script>
-  </div>
 </body>
 </html>
