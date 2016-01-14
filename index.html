@@ -222,7 +222,7 @@
       initialTransition: 'fade',
       debug: true,
       wait: true,
-      idleMode:false,
+      idleMode: false,
       pauseOnInteraction: true,
       fullscreenDoubleTap: false,
       backlink: false,
@@ -238,50 +238,8 @@
         max: 30,
         imageSize: 'big',
         sort: 'interestingness-desc',
-        thumbSize: 'thumb',
-      },
-      extend: function() {
-        var gallery = this;
-
-        // Set the slideshow up to resume playing (if it's been paused) when the right arrow is clicked
-        this.$('image-nav-right').click(function() {
-          if (speed){
-            if (!gallery.isPlaying() && !clickNext) {
-              gallery.play();
-            } else if (clickNext) {
-              if (!gallery.isPlaying()) {
-                gallery.play();
-              }
-            }
-          }
-        });
-
-        /*
-        Note:
-        Looking through thumbnails pauses the show (otherwise you get annoying 'snap backs' when the main picture cycles
-        */
-        this.$('thumb-nav-left, thumb-nav-right').click(function() {
-          if (gallery.isPlaying()){
-            gallery.pause();
-          }
-        });
-        $("#flick").click(function() {
-          gallery.pause();
-        });
+        thumbSize: 'thumb'
       }
-    });
-
-    // This fixes an issue where the link back to the Flickr images doesn't appear within the iframe on iOS
-    $(document).ready(function() {
-      var iOS = navigator.userAgent.match(/(iPad|iPhone|iPod)/g) ? true : false;
-      var layout = "responsive";
-      if(iOS && layout == "responsive") {
-        // change bottom point for iOS
-        $("#creditDiv").css("bottom", "25px");
-      }
-      $("#backlink").bind( "click", function() {
-        ga('send', 'event', 'backlink', 'flickr-click');
-      });
     });
   </script>
 </body>
