@@ -192,11 +192,11 @@
     Galleria.on('image', function(e){
       var img = e.imageTarget;
       var picSource = $(img).attr("src");
-      if (picSource == undefined) {
+      if (typeof picSource === "undefined") {
         picSource = $("img:first").attr("src");
       }
       var slashPieces = picSource.split("/");
-      var lastSlash = (slashPieces[slashPieces.length -1]);
+      var lastSlash = slashPieces[slashPieces.length - 1];
       var lastPieces = lastSlash.split("_");
       var newUrl = "http://flickr.com/photo.gne?id=" + lastPieces[0];
       $("#flick").attr("href", newUrl);
